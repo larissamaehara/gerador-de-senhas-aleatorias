@@ -48,7 +48,7 @@
     font-size: 4rem;
     margin-bottom: 1.5rem;
     color: #fff;
-    word-spacing: 50rem;
+    word-spacing: 50rem; /*uma palavra por linha*/
   }
   
   #register-form {

@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" sizes="16x16"  href="/favicons/favicon-16x16.png">
-    <title>Gerador de Senha</title>
+    <title>Gerador de Senhas Aleatórias</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -17,28 +17,29 @@
 </head>
 
 <body>
+    <!--divs para formatar o CSS--> 
     <div id="register-container">
         <div id="register-banner">
             <div id="banner-layer">
                 <h1>Seja bem-vindo</h1>
             </div>
         </div>
-        <div id="register-form">
+        <div id="register-form"> <!--Formulário de registro--> 
             <h2>Crie sua conta:</h2>
             <p>Registre-se para utilizar todas as funcionalidades do sistema</p>
-            <div class="form-control">
+            <div class="form-control"> <!--Nome-->
                 <label for="name">Nome</label>
                 <input type="text" name="name" id="name" placeholder="Digite o seu nome" />
             </div>
-            <div class="form-control">
+            <div class="form-control"><!--Email-->
                 <label for="email">E-mail</label>
                 <input type="text" type="email" id="email" placeholder="Digite o seu e-mail" />
             </div>
-            <div class="form-control">
+            <div class="form-control"> <!--Senha-->
                 <label for="password">Senha</label>
                 <input type="text" type="password" id="password" placeholder="Digite a sua senha" />
             </div>
-            <p>
+            <p> <!--Gerador de senhas aleatórias-->
                 Quer ajuda para criar uma senha segura?
                 <span id="open-generate-password">Clique aqui.</span>
             </p>
@@ -67,11 +68,11 @@
                 <h4></h4>
                 <button id="copy-password">Copiar</button>
             </div>
-            <div class="form-control">
+            <div class="form-control"> <!--Confirmar a senha-->
                 <label for="confirmpassword">Confirmação de Senha</label>
                 <input type="text" type="confirmpassword" id="confirmpassword" placeholder="Confirme a sua senha" />
             </div>
-            <input type="submit" value="Cadastrar" />
+            <input type="submit" value="Cadastrar" /> <!--Submiter a senha-->
         </div>
     </div>
 </body>

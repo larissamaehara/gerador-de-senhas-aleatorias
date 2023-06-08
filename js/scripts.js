@@ -3,9 +3,7 @@ const generatePasswordButton = document.querySelector("#generate-password");
 const generatedPasswordElement = document.querySelector("#generated-password");
 
 // Novas funcionalidades
-const openCloseGeneratorButton = document.querySelector(
-  "#open-generate-password"
-);
+const openCloseGeneratorButton = document.querySelector("#open-generate-password");
 const generatePasswordContainer = document.querySelector("#generate-options");
 const lengthInput = document.querySelector("#length");
 const lettersInput = document.querySelector("#letters");
@@ -13,55 +11,41 @@ const numbersInput = document.querySelector("#numbers");
 const symbolsInput = document.querySelector("#symbols");
 const copyPasswordButton = document.querySelector("#copy-password");
 
-// Funções
+// Funções para utilizar caracteres específicos para criar a senha (letras maiúsculas, letras minúsculas, números e caracteres especiais)
 const getLetterLowerCase = () => {
   return String.fromCharCode(Math.floor(Math.random() * 26) + 97);
 };
-
 const getLetterUpperCase = () => {
   return String.fromCharCode(Math.floor(Math.random() * 26) + 65);
 };
-
 const getNumber = () => {
   return Math.floor(Math.random() * 10).toString();
 };
-
 const getSymbol = () => {
   const symbols = "(){}[]=<>/,.!@#$%&*+-";
   return symbols[Math.floor(Math.random() * symbols.length)];
 };
-
-const generatePassword = (
-  getLetterLowerCase,
-  getLetterUpperCase,
-  getNumber,
-  getSymbol
-) => {
+//Função generatePassword(size) que recebe o tamanho da senha como parâmetro e retorna a senha gerada.
+const generatePassword = (getLetterLowerCase, getLetterUpperCase, getNumber, getSymbol) => {
   let password = "";
 
-  //   Segunda versão
+  // Escolhe a quatidade de caracteres da senha
   const passwordLength = +lengthInput.value;
-
   const generators = [];
-
   if (lettersInput.checked) {
     generators.push(getLetterLowerCase, getLetterUpperCase);
   }
-
   if (numbersInput.checked) {
     generators.push(getNumber);
   }
-
   if (symbolsInput.checked) {
     generators.push(getSymbol);
   }
-
   console.log(generators.length);
-
   if (generators.length === 0) {
     return;
   }
-
+  // Laço que gera caracteres aleatórios da senha
   for (i = 0; i < passwordLength; i = i + generators.length) {
     generators.forEach(() => {
       const randomValue =
@@ -73,18 +57,14 @@ const generatePassword = (
 
   password = password.slice(0, passwordLength);
 
-  generatedPasswordElement.style.display = "block";
+  //Exibe a senha gerada na tela
+  generatedPasswordElement.style.display = "block"; 
   generatedPasswordElement.querySelector("h4").innerText = password;
 };
 
 // Eventos
 generatePasswordButton.addEventListener("click", () => {
-  generatePassword(
-    getLetterLowerCase,
-    getLetterUpperCase,
-    getNumber,
-    getSymbol
-  );
+  generatePassword(getLetterLowerCase, getLetterUpperCase, getNumber, getSymbol);
 });
 
 openCloseGeneratorButton.addEventListener("click", () => {
