@@ -2,7 +2,7 @@
 const generatePasswordButton = document.querySelector("#generate-password");
 const generatedPasswordElement = document.querySelector("#generated-password");
 
-// Novas funcionalidades
+// Escolha dos caracteres
 const openCloseGeneratorButton = document.querySelector("#open-generate-password");
 const generatePasswordContainer = document.querySelector("#generate-options");
 const lengthInput = document.querySelector("#length");
@@ -31,25 +31,25 @@ const generatePassword = (getLetterLowerCase, getLetterUpperCase, getNumber, get
 
   // Escolhe a quatidade de caracteres da senha
   const passwordLength = +lengthInput.value;
-  const generators = [];
+  const showPassword = [];
   if (lettersInput.checked) {
-    generators.push(getLetterLowerCase, getLetterUpperCase);
+    showPassword.push(getLetterLowerCase, getLetterUpperCase);
   }
   if (numbersInput.checked) {
-    generators.push(getNumber);
+    showPassword.push(getNumber);
   }
   if (symbolsInput.checked) {
-    generators.push(getSymbol);
+    showPassword.push(getSymbol);
   }
-  console.log(generators.length);
-  if (generators.length === 0) {
+  console.log(showPassword.length);
+  if (showPassword.length === 0) {
     return;
   }
   // Laço que gera caracteres aleatórios da senha
-  for (i = 0; i < passwordLength; i = i + generators.length) {
-    generators.forEach(() => {
+  for (i = 0; i < passwordLength; i = i + showPassword.length) {
+    showPassword.forEach(() => {
       const randomValue =
-        generators[Math.floor(Math.random() * generators.length)]();
+      showPassword[Math.floor(Math.random() * showPassword.length)]();
 
       password += randomValue;
     });
