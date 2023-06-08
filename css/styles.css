@@ -1,5 +1,5 @@
 * {
-    font-family: "Montserrat", sans-serif;
+    font-family: Helvetica;
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -13,7 +13,7 @@
   }
   
   html {
-    background: linear-gradient(180deg, #ea03ff 0%, #0097ff 100%);
+    background: linear-gradient(90deg, #04721c 0%, #333 100%);
   }
   
   input:focus {
@@ -25,12 +25,12 @@
     min-height: 80vh;
     margin: 2rem auto;
     display: flex;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    box-shadow: rgba(50, 50, 50, 0.25) 0px 13px 27px -5px,
       rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
   }
   
   #register-banner {
-    background: url("backgroud.jpg");
+    background-color: #111111;
     background-size: cover;
     background-position: center;
     width: 50%;
@@ -67,8 +67,8 @@
   #register-form p {
     text-align: center;
     margin-bottom: 1.5rem;
-    color: #aaa;
-    font-size: 0.8rem;
+    color: #949494;
+    font-size: 0.9rem;
   }
   
   .form-control {
@@ -95,11 +95,11 @@
   }
   
   #open-generate-password:hover {
-    color: #0099ff;
+    color: #04721c;
   }
   
   #register-form #generated-password {
-    border: 1px solid #0099ff;
+    border: 1px solid #04721c;
     border-radius: 4px;
     font-weight: bold;
     font-size: 1.2rem;
@@ -118,7 +118,7 @@
   #register-form input[type="submit"],
   #generate-options button,
   #copy-password {
-    background-color: #81d340;
+    background-color: #04721c;
     color: #fff;
     opacity: 0.8;
     border: none;
@@ -158,7 +158,7 @@
   }
   
   #generate-options button {
-    background-color: #0097ff;
+    background-color: #04721c;
     display: block;
     margin: 0 auto;
   }
@@ -166,8 +166,8 @@
   #copy-password {
     margin: 1rem auto;
     background-color: transparent;
-    border: 2px solid #81d340;
-    color: #81d340;
+    border: 2px solid #04721c;
+    color: #04721c;
     padding: 0.5rem 1rem;
   }
   
