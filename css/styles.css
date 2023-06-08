@@ -10,6 +10,8 @@
   body {
     height: auto;
     min-height: 100vh;
+    background-image: url('background.jpg');
+    background-size: cover;
   }
   
   html {
@@ -30,14 +32,13 @@
   }
   
   #register-banner {
-    background: url("../img/bg-form.jpg");
+    background: url("backgroud.jpg");
     background-size: cover;
     background-position: center;
     width: 50%;
   }
   
   #banner-layer {
-    background-color: rgba(25, 11, 122, 0.7);
     height: 100%;
     padding: 2rem;
     display: flex;
